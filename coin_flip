@@ -1,0 +1,20 @@
+
+#Coin flip game
+
+def coin_flip(bet, side):
+  heads = 1
+  tails = 2
+  num = random.randint(1, 2)
+  gain = 0
+  if num == heads and side == "Heads":
+    gain = bet * 2
+    print("Coin flip: Heads was right! You won {gain} dollars!".format(gain=gain))
+    return gain
+  if num == tails and side == "Tails":
+    gain += bet * 2
+    print("Coin flip: Tails was right! You won {gain} dollars!".format(gain=gain))
+    return gain
+  else:
+    gain += bet * 2
+    print("Coin flip: You were wrong. You lost {gain} dollars.".format(gain=gain))
+    return - gain
